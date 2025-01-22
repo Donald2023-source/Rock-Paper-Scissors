@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock, Paper and Scissors</title>
+  <link rel="img" href="./images/logo-bonus.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+     <div class="top_container">
+          <div class="top-box">
+            <div class="text">
+              <span>ROCK</span>
+              <span>PAPER</span>
+              <span>SCISSORS</span>
+            </div>
+
+            <div class="score-container">
+              <h4 class="score_title">
+                  Score
+              </h4>
+              <h2 id="score" class="score"></h2>
+          </div>
+          
+        </div>
+        
+
+        <button  onclick="showLeadboard()" class="Leadboard_show">Leadboard</button>
+     </div>
+
+      <main>
+          <img src="images/bg-triangle.svg" alt="" class="triangle">
+
+          <div class="moves-container">
+              <span onclick="makeMove('Rock')" class="border rock"><img src="./images/icon-rock.svg" /> </span>
+              <span onclick="makeMove('Paper')" class="border paper"><img src="./images/icon-paper.svg"/></span>
+              <span onclick="makeMove('Scissors')" class="border scissors"><img src="./images/icon-scissors.svg"/></span>
+          </div>
+
+         
+
+          <div class="card">
+            <h2>Leadboard</h2>
+            <hr>
+
+            <h2 onclick="closeLeadboard()" class="close_btn">&times;</h2>
+
+            <div class="scores">
+              <span>
+                 <h4>Wins</h4>
+                 <p class="wins"></p>
+              </span>
+
+              <span>
+                <h4>Loses</h4>
+                <p class="loses"></p>
+             </span>
+
+             <span>
+              <h4>Ties</h4>
+              <p class="ties"></p>
+           </span>
+            </div>
+
+            <button onclick="resetScore()" class="Leadboard_show">Reset Score</button>
+          </div>
+      </main>
+     
+      <div class="overlay"/>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
