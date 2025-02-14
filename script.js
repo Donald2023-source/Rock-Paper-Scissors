@@ -2,7 +2,7 @@ let playerMove = '';
 let computerMove = '';
 let result = '';
 let score;
-
+let message = ''
 
 
 if (localStorage.getItem('score')) {
@@ -28,10 +28,13 @@ function selectComputerMove() {
 function assignScore() {
   if (result === 'Win') {
     score.Wins += 1;
+     message = `Computer Choose ${computerMove}, You won!`
   } else if (result === 'Lose') {
     score.Loses += 1;
+      message = `Computer Choose ${computerMove}, You lost`
   } else if (result === 'Tie') {
     score.Ties += 1;
+     message = `Computer Choose ${computerMove}, It's a tie`
   }
 
   localStorage.setItem('score', JSON.stringify(score));
@@ -45,7 +48,6 @@ function updateScore() {
 }
 
 updateScore()
-
 
 function makeMove(playerMove) {
   selectComputerMove();
@@ -109,3 +111,4 @@ function showLeadboard() {
   leadboard_Ties.textContent = score.Ties;
   resetScore()
 }
+
